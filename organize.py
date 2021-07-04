@@ -1,4 +1,4 @@
-#!/bin/python3.7
+#!/usr/bin/env python3
 
 import os
 import shutil
@@ -8,24 +8,26 @@ sourcefiles = os.listdir(SourcePath)
 
 VideoPath = '/home/ian/Videos/'
 PicturePath = '/home/ian/Pictures/'
+DocumentPath = '/home/ian/Documents/'
 
 for file in sourcefiles:
-        if file.endswith('.mp4'):
+        
+        if file.endswith('.mp4'): #Videos
                 shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MP4 File Moved.')
         
         elif file.endswith('.avi'):
-                shutil.move(os.path.join(SourcePath,file), os.path.join(PicturePath,file))
+                shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
                 print(file)
                 print('AVI File Moved.')
 
         elif file.endswith('.mkv'):
-                shutil.move(os.path.join(SourcePath,file), os.path.join(PicturePath,file))
+                shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MKV File Moved.')
 
-        elif file.endswith('.jpg'):
+        elif file.endswith('.jpg'): #Pictures
                 shutil.move(os.path.join(SourcePath,file), os.path.join(PicturePath,file))
                 print(file)
                 print('JPG File Moved.')
@@ -36,6 +38,32 @@ for file in sourcefiles:
                 print('PNG File Moved.')
         
         elif file.endswith('.jpeg'):
-                shutil.move(os.path.join(SourcePath,file), os.path.join(PictureDestinationPath,file))
+                shutil.move(os.path.join(SourcePath,file), os.path.join(PicturePath,file))
                 print(file)
                 print('JPEG File Moved.')
+
+        
+        elif file.endswith('.gif'):
+                shutil.move(os.path.join(SourcePath,file), os.path.join(PicturePath,file))
+                print(file)
+                print('GIF File Moved.')
+
+        elif file.endswith('.pdf'):#Documents
+                shutil.move(os.path.join(SourcePath,file), os.path.join(DocumentPath,file))
+                print(file)
+                print('PDF File Moved.')
+
+        elif file.endswith('.doc'):
+                shutil.move(os.path.join(SourcePath,file), os.path.join(DocumentPath,file))
+                print(file)
+                print('Doc File Moved.')
+
+        elif file.endswith('.txt'):
+                shutil.move(os.path.join(SourcePath,file), os.path.join(DocumentPath,file))
+                print(file)
+                print('TXT File Moved.')
+
+        elif file.endswith('.xlsx'):
+                shutil.move(os.path.join(SourcePath,file), os.path.join(DocumentPath,file))
+                print(file)
+                print('Spreadsheet File Moved.')

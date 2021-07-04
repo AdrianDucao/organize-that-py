@@ -1,0 +1,11 @@
+[Unit]
+Description=Organize that py is a janitorial file clean up crew
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/ian/automate/organize-that-py/organize.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
