@@ -5,14 +5,14 @@ import shutil
 
 SourcePath='/home/ian/Downloads/'
 sourcefiles = os.listdir(SourcePath)
-SecondarySource = '/home/ian/Downloads/VideoDownloader/'
-secondsource = os.listdir(SecondarySource)
+SecondSource = '/home/ian/Downloads/VideoDownloader/'
+secondsourcefile = os.listdir(SecondSource)
 
 VideoPath = '/home/ian/Videos/'
 PicturePath = '/home/ian/Pictures/'
 DocumentPath = '/home/ian/Documents/'
 
-for file in sourcefiles or SecondarySource:
+for file in sourcefiles or secondsourcefile:
         
         if file.endswith('.mp4'): #Videos
                 shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
@@ -40,27 +40,27 @@ for file in sourcefiles or SecondarySource:
                 print('MP4 File Moved.')
 
         elif file.endswith('.mp4'): #YTDownloader
-                shutil.move(os.path.join(SecondarySource,file), os.path.join(VideoPath,file))
+                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MP4 File Moved.')
         
         elif file.endswith('.avi'):
-                shutil.move(os.path.join(SecondarySource,file), os.path.join(VideoPath,file))
+                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('AVI File Moved.')
 
         elif file.endswith('.mkv'):
-                shutil.move(os.path.join(SecondarySource,file), os.path.join(VideoPath,file))
+                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MKV File Moved.')
         
         elif file.endswith('.webm'):
-                shutil.move(os.path.join(SecondarySource,file), os.path.join(VideoPath,file))
+                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('Webm File Moved.')
         
         elif file.endswith('.MP4'):
-                shutil.move(os.path.join(SecondarySource,file), os.path.join(VideoPath,file))
+                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MP4 File Moved.')
 
