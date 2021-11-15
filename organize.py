@@ -12,7 +12,7 @@ VideoPath = '/home/ian/Videos/'
 PicturePath = '/home/ian/Pictures/'
 DocumentPath = '/home/ian/Documents/'
 
-for file in sourcefiles or secondsourcefile:
+for file in sourcefiles:
         
         if file.endswith('.mp4'): #Videos
                 shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
@@ -36,31 +36,6 @@ for file in sourcefiles or secondsourcefile:
         
         elif file.endswith('.MP4'):
                 shutil.move(os.path.join(SourcePath,file), os.path.join(VideoPath,file))
-                print(file)
-                print('MP4 File Moved.')
-
-        elif file.endswith('.mp4'): #YTDownloader
-                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
-                print(file)
-                print('MP4 File Moved.')
-        
-        elif file.endswith('.avi'):
-                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
-                print(file)
-                print('AVI File Moved.')
-
-        elif file.endswith('.mkv'):
-                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
-                print(file)
-                print('MKV File Moved.')
-        
-        elif file.endswith('.webm'):
-                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
-                print(file)
-                print('Webm File Moved.')
-        
-        elif file.endswith('.MP4'):
-                shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
                 print(file)
                 print('MP4 File Moved.')
 
@@ -103,3 +78,29 @@ for file in sourcefiles or secondsourcefile:
                 shutil.move(os.path.join(SourcePath,file), os.path.join(DocumentPath,file))
                 print(file)
                 print('Spreadsheet File Moved.')
+
+        for file in secondsourcefile:
+                if file.endswith('.mp4'): #YTDownloader
+                        shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
+                        print(file)
+                        print('MP4 File Moved.')
+                        
+                elif file.endswith('.avi'):
+                        shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
+                        print(file)
+                        print('AVI File Moved.')
+
+                elif file.endswith('.mkv'):
+                        shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
+                        print(file)
+                        print('MKV File Moved.')
+                        
+                elif file.endswith('.webm'):
+                        shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
+                        print(file)
+                        print('Webm File Moved.')
+                        
+                elif file.endswith('.MP4'):
+                        shutil.move(os.path.join(SecondSource,file), os.path.join(VideoPath,file))
+                        print(file)
+                        print('MP4 File Moved.')
